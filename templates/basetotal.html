@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Panel de Informacion{% endblock %}
+
+{% block page_content %}
+
+    <h1 style="color:Gray;" ALIGN=center id='titulo'>Bienvenido Usuario: {{ username }}</h1> 
+
+<li ><a href="/basetotal">Ultimas Ventas</a></li>   
+<li ><a href="/clientes">Clientes</a></li>  
+<li ><a href="/productosvendidos">Productos Vendidos</a></li>  
+<br>
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+
+   <h1 style="color:tomato;" ALIGN=Center>Ultimas Ventas</h1>
+
+<table class="table" style="background-color: tomato">
+
+{% for line in listar %}
+  <tr>
+    <td><font color="white">{{ line[0] }}</font></td>
+    <td><font color="white">{{ line[1] }}</font></td>
+    <td><font color="white">{{ line[2] }}</font></td>
+    <td><font color="white">{{ line[3] }}</font></td>
+    <td><font color="white">{{ line[4] }}</font></td>
+  </tr>
+{% endfor %}
+</table>
+{% endblock %}

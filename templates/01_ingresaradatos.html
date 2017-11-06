@@ -1,0 +1,25 @@
+
+
+{% extends "base.html" %}
+
+{% block title %}Ingresar{% endblock %}
+
+{% block page_content %}
+<div class="page-header">    
+   
+    <h1 style="color:tomato;">Debe Iniciar Sesion para tener acceso a este link</h1>
+	<form method="POST" action="">
+            <br>
+            <br>
+			{{ login.csrf_token }}
+			{{ login.usuario(placeholder="Usuario", size=20) }}
+			<br>
+			{{ login.contraseña(placeholder="Contraseña", size=20) }}
+			<br><br><br>
+			{{ login.submit() }}
+		</form>
+    
+    
+</div>
+{% endblock %}
+
