@@ -27,9 +27,10 @@ class Consultas(FlaskForm):
     basetotal = StringField('basetotal')
     mejorescomptradores = StringField('mejorescomptradores')
     clientes = StringField('clientes')
+# testing
     productosxclientes = StringField('Usuario' , validators=[DataRequired()])
 
-
+# testing
 class Cliente_Productos(FlaskForm):
     cliente = StringField('Cliente' , validators=[DataRequired()]) 
     submit = SubmitField('Listar')   
@@ -68,7 +69,11 @@ def clientesporproductos():
     return redirect('/basetotal')
 
 
-
+# INICIO
+#
+#
+#
+#
 # Se genera URL /Inicio donde el usuario podra validar sus credenciales y tener acceso a PANEL DE CONSULTAS en la web.
 @app.route('/ingresar', methods=['GET', 'POST'])
 def iniciodesesion():
